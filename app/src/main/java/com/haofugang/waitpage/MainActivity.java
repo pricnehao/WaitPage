@@ -9,6 +9,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
+/**
+ * @postmusic
+ * http://www.postmusic.cn/
+ * @author  haofugang
+ */
 public class MainActivity extends AppCompatActivity {
     TextView MyTextView;
     WebView webView;

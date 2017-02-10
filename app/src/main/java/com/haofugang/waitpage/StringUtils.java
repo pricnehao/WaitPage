@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 
 /**
  * 字符串处理类
- * 
  * @author hfg0613
  */
 @SuppressLint("DefaultLocale")

@@ -21,16 +21,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static com.haofugang.waitpage.R.id.gif;
-
 /**
+ * @postmusic
+ * http://www.postmusic.cn/
+ * @author  haofugang
  * 启动动画页
  */
-
 public class WaitActivity extends Activity {
 
     private MainDateCachesUtil mainDateCachesUtil;
     private ImageView gf1;
-    private boolean ISHAVEIMAGE = false; //下载的图片是否存在
     private String wait_icon_path;
     private String wait_icon_type;
     private TextView skip;
@@ -41,8 +41,8 @@ public class WaitActivity extends Activity {
     public final int ADVERTFLAGE = 10;
     public final int AWAITFLAGE = 11;
     private Timer advert_timer;
-
-
+    private String OtherImg = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486733583572&di=d32b6c089fb0f65163fe868db45d561f&imgtype=0&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201507%2F31%2F20150731180246_HkyUz.thumb.700_0.jpeg";
+    private String img_url = "";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -63,6 +63,7 @@ public class WaitActivity extends Activity {
         wait_icon_path = Mysharedpreference.getstring(WaitActivity.this, "wait_icon", "wait_icon_path");
         wait_icon_type = Mysharedpreference.getstring(WaitActivity.this, "wait_icon", "wait_icon_type");
         app_boot_url = Mysharedpreference.getstring(WaitActivity.this, "wait_icon", "app_boot_url");
+        img_url = Mysharedpreference.getstring(WaitActivity.this, "wait_icon", "img_url");
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +115,13 @@ public class WaitActivity extends Activity {
         /**
          * 使用者可以在此处进行网络请求并且进行获取请求下来的图片地址和跳转路径
          */
-        mainDateCachesUtil.DownLoaderImg("http://himg2.huanqiu.com/attachment2010/2013/0411/20130411025542132.jpg", "https://github.com/pricnehao");
+        if(OtherImg.equals(img_url))
+        {
+            mainDateCachesUtil.DownLoaderImg("http://himg2.huanqiu.com/attachment2010/2013/0411/20130411025542132.jpg", "https://github.com/pricnehao");
+        }else {
+            mainDateCachesUtil.DownLoaderImg(OtherImg, "http://weibo.com/3083667295/profile?topnav=1&wvr=6&is_all=1");
+        }
+
     }
 
 
