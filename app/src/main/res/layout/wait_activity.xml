@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+    >
+    <ImageView
+        android:id="@+id/await_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wait_icon"
+        />
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:id="@+id/advert_view"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/voide_fillet_bg"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:text="跳过"
+        android:id="@+id/skip"
+        android:textColor="#ffffff"
+        />
+</RelativeLayout>
+</RelativeLayout>
